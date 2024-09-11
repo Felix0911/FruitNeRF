@@ -34,8 +34,8 @@ fruit_nerf_method = MethodSpecification(
         pipeline=FruitPipelineConfig(
             datamanager=FruitDataManagerConfig(
                 dataparser=FruitNerfDataParserConfig(),
-                train_num_rays_per_batch=4096,
-                eval_num_rays_per_batch=4096,
+                train_num_rays_per_batch=2048,
+                eval_num_rays_per_batch=2048,
                 camera_optimizer=CameraOptimizerConfig(
                     mode="SO3xR3",
                     optimizer=AdamOptimizerConfig(lr=6e-4, eps=1e-8, weight_decay=1e-2),
